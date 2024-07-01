@@ -119,3 +119,13 @@ Z
 .walletcore/internal/web/transaction_handler.go,8/1/815c68cd153e5b70ac5e98b32601644e5279d076
 n
 >walletcore/internal/event/handler/transaction_created_kafka.go,5/a/5a9dccc5796389aef66bf7df98e6d4daaf1acc7b
+c
+3balance/internal/usecase/get_balance/get_balance.go,d/c/dcda088997eec0ea471b782a7c7a78d813775570
+S
+#balance/internal/gateway/balance.go,1/d/1dc0730f7eca2b60b46f69b0ca6dfbdb36ed7e99
+h
+8balance/internal/usecase/get_balance/get_balance_test.go,9/d/9de5dfb7bcd370349c756409804d352746107abd
+e
+5balance/internal/usecase/save_balance/save_balance.go,d/3/d3dd761c602890ccb53577acdd973b3fc2def487
+j
+:balance/internal/usecase/save_balance/save_balance_test.go,0/1/01c38a28ec81d3f63fd71f27711fb30a73dedfb4
