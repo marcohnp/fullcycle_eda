@@ -10,7 +10,7 @@ Microsserviço **balance** foi criado em linguagem GO, aproveitando os conhecime
 Estrutura do projeto: o projeto está dividido em dois microsserviços, balance (desenvolvido para este desafio) e walletcore (desenvolvido pela Full Cycle). No diretório "mysql-init" estão os dois scritps que devem rodar ao subir a imagem do mysql através do docker compose.
 
 **Passo a passo**:  
-1 - Subir o docker: ```docker compose up --build -d`` 
+1 - Subir o docker: ```docker compose up --build -d```
   
 2 - Criar tópicos (balances, transactions) em Confluent Control Center: http://localhost:9021  
   
