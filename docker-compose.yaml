@@ -14,7 +14,7 @@ services:
       - 3003:3003
 
   mysql:
-    image: mysql:5.7
+    image: mysql:8.0
     platform: linux/amd64
     environment:
       MYSQL_ROOT_PASSWORD: root
@@ -23,11 +23,12 @@ services:
     ports:
       - 3306:3306
     volumes:
-      - ./.schemas/schema.sql:/docker-entrypoint-initdb.d/1.sql
-      - ./.schemas/data.sql:/docker-entrypoint-initdb.d/2.sql
+      - .docker/mysql:/var/lib/mysql
+      - ./mysql-init:/docker-entrypoint-initdb.d
 
   zookeeper:
     image: "confluentinc/cp-zookeeper:6.1.0"
+    platform: linux/amd64
     container_name: zookeeper
     ports:
       - 2181:2181
@@ -38,6 +39,7 @@ services:
 
   kafka:
     image: "confluentinc/cp-enterprise-kafka:6.1.0"
+    platform: linux/amd64
     container_name: kafka
     depends_on:
       - zookeeper

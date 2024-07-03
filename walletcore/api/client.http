@@ -1,5 +1,5 @@
 
-POST http://localhost:3000/clients HTTP/1.1
+POST http://localhost:8080/clients HTTP/1.1
 Content-Type: application/json
 
 {
@@ -9,7 +9,7 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:3000/accounts HTTP/1.1
+POST http://localhost:8080/accounts HTTP/1.1
 Content-Type: application/json
 
 {
@@ -17,12 +17,12 @@ Content-Type: application/json
 }
 
 ###
-
+# Estão configuradas as contas registradas no arquivo insert_records.sql
 POST http://localhost:8080/transactions HTTP/1.1
 Content-Type: application/json
 
 {
-    "account_id_from": "f8df753c-3b58-43aa-8016-12aaa4f1ea3e",
-    "account_id_to": "0216ea38-524f-4e85-8743-d484a8f7538e",
-    "amount": 1
+  "account_id_from": "206ef9f0-e240-4281-a4c8-6813e4f88861",
+  "account_id_to": "3a2413c4-230a-4254-8744-f88764ad4b9a",
+  "amount": 50
 }

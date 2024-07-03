@@ -2,6 +2,7 @@ package get_balance
 
 import (
 	"errors"
+	"fmt"
 	"github.com/marcohnp/fullcycle_eda/internal/gateway"
 	"time"
 )
@@ -31,6 +32,7 @@ func (u *GetBalanceUsecase) Execute(input GetBalanceInputDto) (*GetBalanceOutput
 	balance, err := u.BalanceGateway.FindByID(input.AccountId)
 
 	if err != nil {
+		fmt.Println(err)
 		return nil, errors.New("balance not found")
 	}
 

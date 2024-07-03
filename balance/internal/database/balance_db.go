@@ -15,7 +15,7 @@ func NewBalanceDB(db *sql.DB) *BalanceDB {
 
 func (b *BalanceDB) FindByID(accountID string) (*entity.Balance, error) {
 	var balance entity.Balance
-	stmt, err := b.DB.Prepare("SELECT account_id, balance, created_at, update_at FROM balances WHERE account_id = ?")
+	stmt, err := b.DB.Prepare("SELECT account_id, balance, created_at, updated_at FROM balances WHERE account_id = ?")
 	if err != nil {
 		return nil, err
 	}
@@ -29,7 +29,7 @@ func (b *BalanceDB) FindByID(accountID string) (*entity.Balance, error) {
 }
 
 func (b *BalanceDB) Save(balance *entity.Balance) error {
-	stmt, err := b.DB.Prepare("INSERT INTO balances (account_id, balance, created_at, update_at) VALUES(?,?,?,?)")
+	stmt, err := b.DB.Prepare("INSERT INTO balances (account_id, balance, created_at, updated_at) VALUES(?,?,?,?)")
 	if err != nil {
 		return err
 	}
@@ -42,7 +42,7 @@ func (b *BalanceDB) Save(balance *entity.Balance) error {
 }
 
 func (b *BalanceDB) UpdateBalance(balance *entity.Balance) error {
-	stmt, err := b.DB.Prepare("UPDATE balances SET balance = ?, update_at = ? WHERE account_id = ?")
+	stmt, err := b.DB.Prepare("UPDATE balances SET balance = ?, updated_at = ? WHERE account_id = ?")
 	if err != nil {
 		return err
 	}

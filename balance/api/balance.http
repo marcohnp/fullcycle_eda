@@ -1,0 +1,6 @@
+# get para conta do John Doe
+GET http://localhost:3003/balances/206ef9f0-e240-4281-a4c8-6813e4f88861
+
+###
+# get para conta da Joanna Doe
+GET http://localhost:3003/balances/3a2413c4-230a-4254-8744-f88764ad4b9a
